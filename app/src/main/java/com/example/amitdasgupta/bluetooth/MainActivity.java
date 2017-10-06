@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final TextView out = (TextView) findViewById(R.id.edit);
-        final Button button1 = (Button) findViewById(R.id.button);
-        final Button button2 = (Button) findViewById(R.id.button2);
-        final Button button3 = (Button) findViewById(R.id.button3);
+        
+        
+        
+        
         final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
             out.append("device not supported");
