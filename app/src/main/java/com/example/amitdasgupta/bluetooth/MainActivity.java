@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                if (!mBluetoothAdapter.isDiscovering()) {
+                if (mBluetoothAdapter.isDiscovering()) {
                     out.append("MAKING YOUR DEVICE DISCOVERABLE");
                     Toast.makeText(getApplicationContext(), "MAKING YOUR DEVICE DISCOVERABLE",
                             Toast.LENGTH_LONG);
