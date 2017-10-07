@@ -4,10 +4,13 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                if (mBluetoothAdapter.isDiscovering()) {
+                if (!mBluetoothAdapter.isDiscovering()) {
                     out.append("MAKING YOUR DEVICE DISCOVERABLE");
                     Toast.makeText(getApplicationContext(), "MAKING YOUR DEVICE DISCOVERABLE",
                             Toast.LENGTH_LONG);
